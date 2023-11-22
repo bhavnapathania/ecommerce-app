@@ -27,7 +27,7 @@ function Slider() {
               <div>
                 {parseInt(item.id) === slideIndex && (
                   <img
-                    className="h-[850px] w-full"
+                    className="h-auto w-full"
                     src={item.img}
                     alt="shoes"
                   ></img>
@@ -49,7 +49,7 @@ function Slider() {
               <div
                 className={
                   index === slideIndex
-                    ? "bg-green-300 rounded-full p-2 cursor-pointer"
+                    ? "bg-blue-300 rounded-full p-2 cursor-pointer"
                     : "bg-white rounded-full p-2 cursor-pointer"
                 }
                 onClick={() => dispatch(dotSlide(index))}
@@ -60,7 +60,7 @@ function Slider() {
       </div>
       <div>
         <button
-          className="absolute top-[50%] right-4 bg-white rounded-full p-2 hover:bg-green-300"
+          className="absolute top-[50%] right-4 bg-white rounded-full p-2 hover:bg-blue-300"
           onClick={() => dispatch(nextSlide(slideIndex + 1))}
         >
           <svg
@@ -79,7 +79,7 @@ function Slider() {
           </svg>
         </button>
         <button
-          className="absolute top-[50%] left-4 bg-white rounded-full p-2 hover:bg-green-300"
+          className="absolute top-[50%] left-4 bg-white rounded-full p-2 hover:bg-blue-300"
           onClick={() => dispatch(prevSlide(slideIndex - 1))}
         >
           <svg

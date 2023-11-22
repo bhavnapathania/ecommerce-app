@@ -23,7 +23,7 @@ function SingleProduct() {
             <div key={index} className="flex justify-center items-center py-10">
               <div className="pl-44 grow-[2]">
                 <img
-                  className="h-[850px] rounded-lg"
+                  className="h-auto rounded-lg"
                   src={item.img}
                   alt={item.name}
                 ></img>

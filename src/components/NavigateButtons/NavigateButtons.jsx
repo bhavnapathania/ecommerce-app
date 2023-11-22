@@ -20,7 +20,7 @@ function NavigateButtons() {
   const dispatch = useDispatch();
   return (
     <div>
-      <div className="flex justify-center item-center py-8 ">
+      <div className="flex justify-center item-center py-8 flex-wrap">
         {buttons.map((button, index) => {
           return (
             <div key={index} className="mr-4">
@@ -30,7 +30,7 @@ function NavigateButtons() {
                   size="lg"
                   variant="outlined"
                   ripple={true}
-                  className="text-black hover:bg-gray-300 duration-300 ease-in-out"
+                  className="text-black hover:color-blue-300 duration-300 ease-in-out"
                   onClick={() => dispatch(filterProducts(button))}
                 >
                   {button}
@@ -47,7 +47,7 @@ function NavigateButtons() {
       </div>
       <div className="flex justify-center item-center py-4">
         <img
-          className="h-[600px] w-[70%] rounded-md shadow-lg shadow-gray-600"
+          className="h-auto w-[70%] rounded-md shadow-lg shadow-gray-600"
           src={clothes}
           alt="clothes"
         ></img>

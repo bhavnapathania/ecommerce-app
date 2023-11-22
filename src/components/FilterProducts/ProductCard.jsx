@@ -18,7 +18,7 @@ function ProductCard({ id, name, img, text, price, colors }) {
     <Link to={`/filteredProducts/${type}/` + id}>
       <Card className="w-96" onClick={() => dispatch(singleProduct(id))}>
         <CardHeader color="blue" className="relative h-96">
-          <img src={img} alt="img-blur-shadow" className="h-full w-full" />
+          <img src={img} alt="img-blur-shadow" className="h-auto w-full" />
         </CardHeader>
         <CardBody className="text-center">
           <Typography variant="h5" className="mb-2">

@@ -3,28 +3,28 @@ import FilterProducts from "./components/FilterProducts/FilterProducts";
 import Main from "./components/Main/Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SingleProduct from "./components/FilterProducts/SingleProduct";
+import Login from "./components/Login/Login";
+import { useSelector } from "react-redux";
 
 function App() {
-  // const cart = useSelector((state) => state.cart.cart);
-  // const totalAmount = useSelector((state) => state.cart.totalAmount);
-  // const totalPrice = useSelector((state) => state.cart.totalPrice);
-  // console.log("cart here", cart);
-  // console.log("totalAmount", totalAmount);
-  // console.log("totalPrice", totalPrice);
+  const user = useSelector((state) => state.auth.user);
+  const { authUser } = user;
+
+  console.log("user data", user);
+  console.log("authuser", authUser);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Main />} path={"/"}></Route>
-        <Route
-          element={<FilterProducts />}
-          path={"/filteredProducts/:type"}
-        ></Route>
-        <Route
-          element={<SingleProduct />}
-          path="/filteredProducts/:type/:id"
-        ></Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={authUser ? <Main /> : <Login />} />
+          <Route path="/filteredProducts/:type" element={<FilterProducts />} />
+          <Route
+            path="/filteredProducts/:type/:id"
+            element={<SingleProduct />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

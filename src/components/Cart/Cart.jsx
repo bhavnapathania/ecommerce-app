@@ -38,7 +38,7 @@ function Cart({ openModal, setOpen }) {
                     <div className="grid grid-cols-2 py-4">
                       <div>
                         <img
-                          className="h-[125px] rounded-md"
+                          className="h-[auto] rounded-md"
                           src={item.img}
                           alt={item.name}
                         ></img>
