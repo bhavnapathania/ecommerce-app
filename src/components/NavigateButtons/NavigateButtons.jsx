@@ -20,10 +20,10 @@ function NavigateButtons() {
   const dispatch = useDispatch();
   return (
     <div>
-      <div className="flex justify-center item-center py-8 flex-wrap">
+      <div className="flex justify-center item-center py-8 flex-wrap gap-4">
         {buttons.map((button, index) => {
           return (
-            <div key={index} className="mr-4">
+            <div key={index}>
               <Link to={"/filteredProducts/" + button}>
                 <Button
                   color="gray"
