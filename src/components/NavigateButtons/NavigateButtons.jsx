@@ -26,11 +26,10 @@ function NavigateButtons() {
             <div key={index}>
               <Link to={"/filteredProducts/" + button}>
                 <Button
-                  color="gray"
+                  color="blue"
                   size="lg"
-                  variant="outlined"
                   ripple={true}
-                  className="text-black hover:color-blue-300 duration-300 ease-in-out"
+                  className=" hover:color-blue-300 duration-300 ease-in-out"
                   onClick={() => dispatch(filterProducts(button))}
                 >
                   {button}

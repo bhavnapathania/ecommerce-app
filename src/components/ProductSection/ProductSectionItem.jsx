@@ -77,8 +77,7 @@ function ProductSectionItem({
               )
             }
             size="lg"
-            color="gray"
-            variant="outlined"
+            color="blue"
             ripple={true}
           >
             Add to Cart

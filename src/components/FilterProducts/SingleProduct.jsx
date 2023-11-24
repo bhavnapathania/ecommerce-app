@@ -117,9 +117,8 @@ function SingleProduct() {
                   </div>
                   <Tooltip content="Add to Cart" placement="bottom">
                     <Button
-                      color="gray"
+                      color="blue"
                       size="lg"
-                      variant="outlined"
                       ripple={true}
                       onClick={() =>
                         dispatch(
