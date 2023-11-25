@@ -9,6 +9,7 @@ import {
 import { Button } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/slices/cartSlice";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function ProductSectionItem({
   id,
@@ -33,7 +34,7 @@ function ProductSectionItem({
         SALE%
       </Typography>
       <CardHeader floated={false} className="h-96">
-        <img src={img} alt={name} />
+        <LazyLoadImage src={img} alt={name} />
       </CardHeader>
       <CardBody className="text-center">
         <Typography variant="h4" color="blue-gray" className="mb-2">

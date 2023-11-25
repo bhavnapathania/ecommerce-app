@@ -20,15 +20,18 @@ function SingleProduct() {
         .filter((product) => product.id === id)
         .map((item, index) => {
           return (
-            <div key={index} className="flex justify-center items-center py-10">
-              <div className="pl-44 grow-[2]">
+            <div
+              key={index}
+              className="flex flex-wrap items-center justify-between"
+            >
+              <div className="w-[100%] md:w-[49%]">
                 <img
-                  className="h-auto rounded-lg"
+                  className="rounded-lg "
                   src={item.img}
                   alt={item.name}
                 ></img>
               </div>
-              <div className="grow-[3]">
+              <div className="w-[100%] md:w-[49%]">
                 <div className="max-w-lg">
                   <h5 className="text-2xl font-inter font-bold tracking-normal leading-none pb-4">
                     {item.name}
