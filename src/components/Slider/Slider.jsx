@@ -20,21 +20,21 @@ function Slider() {
               key={item.id}
               className={
                 parseInt(item.id) === slideIndex
-                  ? "opacity-100 duration-700 ease-in-out scale-100"
-                  : "opacity-0 duration-700 ease-in-out scale-95"
+                  ? "opacity-100 "
+                  : "opacity-0  "
               }
             >
               <div>
                 {parseInt(item.id) === slideIndex && (
                   <img
-                    className="h-auto w-full"
+                    className="h-auto w-full "
                     src={item.img}
                     alt="shoes"
                   ></img>
                 )}
               </div>
-              <div className="absolute top-44 mx-auto inset-x-1/4">
-                <p className="text-white text-4xl font-inter font-bold tracking-normal leading-none">
+              <div className="absolute top-[40%] md:top-[6%]  mx-auto inset-x-1/4">
+                <p className="text-white text-lg md:text-5xl font-inter font-bold tracking-normal leading-none">
                   {parseInt(item.id) === slideIndex && item.text}
                 </p>
               </div>
@@ -42,7 +42,7 @@ function Slider() {
           );
         })}
       </div>
-      <div className="flex absolute bottom-12  left-[45%]">
+      <div className="flex absolute bottom-[10%] left-1/2 transform -translate-x-1/2 ">
         {SliderData.map((dot, index) => {
           return (
             <div className="mr-4" key={dot.id}>
